@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+struct Student {
+    int roll;
+    float marks;
+};
+
+int main() {
+    struct Student s1, s2, s3;
+
+    // Input for Student 1
+    printf("Enter roll number for Student 1: ");
+    scanf("%d", &s1.roll);
+    printf("Enter marks for Student 1: ");
+    scanf("%f", &s1.marks);
+
+    // Input for Student 2
+    printf("Enter roll number for Student 2: ");
+    scanf("%d", &s2.roll);
+    printf("Enter marks for Student 2: ");
+    scanf("%f", &s2.marks);
+
+    // Input for Student 3
+    printf("Enter roll number for Student 3: ");
+    scanf("%d", &s3.roll);
+    printf("Enter marks for Student 3: ");
+    scanf("%f", &s3.marks);
+
+    // Displaying the mark list
+    printf("\n--- Student Mark List ---\n");
+    printf("Roll: %d\tMarks: %.2f\n", s1.roll, s1.marks);
+    printf("Roll: %d\tMarks: %.2f\n", s2.roll, s2.marks);
+    printf("Roll: %d\tMarks: %.2f\n", s3.roll, s3.marks);
+
+    return 0;
+}
