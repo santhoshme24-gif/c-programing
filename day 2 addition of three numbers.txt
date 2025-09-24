@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3, sum;
+
+    // Input three numbers
+    printf("Enter three integers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    // Calculate sum
+    sum = num1 + num2 + num3;
+
+    // Display result
+    printf("Sum of %d, %d and %d is %d\n", num1, num2, num3, sum);
+
+    return 0;
+}

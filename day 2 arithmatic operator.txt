@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int a = 15, b = 4;
+    
+    // Arithmetic operations
+    int sum = a + b;
+    int diff = a - b;
+    int prod = a * b;
+    int quot = a / b;
+    int rem = a % b;
+
+    // Display results
+    printf("a = %d, b = %d\n", a, b);
+    printf("Sum: a + b = %d\n", sum);
+    printf("Difference: a - b = %d\n", diff);
+    printf("Product: a * b = %d\n", prod);
+    printf("Quotient: a / b = %d\n", quot);
+    printf("Remainder: a %% b = %d\n", rem);
+
+    return 0;
+}
