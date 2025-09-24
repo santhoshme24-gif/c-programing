@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number (1 to 100): ");
+    scanf("%d", &num);
+
+    switch(num) {
+        case 1:
+            printf("You entered One\n");
+            break;
+        case 2:
+            printf("You entered Two\n");
+            break;
+        case 3:
+            printf("You entered Three\n");
+            break;
+        case 4:
+            printf("You entered Four\n");
+            break;
+        case 5:
+            printf("You entered Five\n");
+            break;
+        case 6:
+            printf("You entered Six\n");
+            break;
+        case 7:
+            printf("You entered Seven\n");
+            break;
+        case 8:
+            printf("You entered Eight\n");
+            break;
+        case 9:
+            printf("You entered Nine\n");
+            break;
+        case 10:
+            printf("You entered Ten\n");
+            break;
+        default:
+            printf("Number is not between 1 and 10.\n");
+    }
+
+    return 0;
+}

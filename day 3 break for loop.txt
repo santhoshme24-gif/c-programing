@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+    for (i = 0; i < 10; i++) {
+        if (i == 5) {
+            break;  // exit the loop when i is 5
+        }
+        printf("%d\n", i);
+    }
+    printf("Loop ended because break was executed.\n");
+    return 0;
+}
