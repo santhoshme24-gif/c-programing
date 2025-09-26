@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int matrix[3][3]; 
+    int row, col;
+    printf("Enter the elements of the 3x3 matrix:\n");
+    for (row = 0; row < 3; row++) {
+        for (col = 0; col < 3; col++) {
+            printf("Enter element at position [%d][%d]: ", row, col);
+            scanf("%d", &matrix[row][col]);
+        }
+    }
+    printf("\nThe 3x3 matrix is:\n");
+    for (row = 0; row < 3; row++) {
+        for (col = 0; col < 3; col++) {
+            printf("%d\t", matrix[row][col]); 
+        }
+        printf("\n"); 
+    }
+
+    return 0;
+}
