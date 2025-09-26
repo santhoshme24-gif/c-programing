@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <limits.h> 
+
+int main() {
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    if (n < 2) {
+        printf("Please enter at least two elements to find the second largest.\n");
+        return 1; 
+    }
+
+    int largest = INT_MIN;      
+    int secondLargest = INT_MIN; 
+    int num;
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        printf("Element %d: ", i + 1);
+        scanf("%d", &num);
+
+        if (num > largest) {
+            secondLargest = largest; 
+            largest = num;           
+        } else if (num > secondLargest && num < largest) {
+            secondLargest = num;     
+        }
+    }
+
+    if (secondLargest == INT_MIN) {
+        printf("There is no distinct second largest element (e.g., all elements are the same).\n");
+    } else {
+        printf("The second largest element is: %d\n", secondLargest);
+    }
+
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int limit, i;
+    int even_sum = 0;
+    int odd_sum = 0;
+    printf("Enter the positive integer limit: ");
+    scanf("%d", &limit);
+    if (limit < 1) {
+        printf("Invalid input. Please enter a positive integer.\n");
+        return 1;
+    }
+    for (i = 1; i <= limit; i++) {
+        if (i % 2 == 0) {
+            even_sum += i; 
+        } else {
+            odd_sum += i; 
+        }
+    }
+    printf("Sum of even numbers up to %d: %d\n", limit, even_sum);
+    printf("Sum of odd numbers up to %d: %d\n", limit, odd_sum);
+
+    return 0; 
+}

@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int num, count, positive_count = 0, negative_count = 0, zero_count = 0;
+    int total_inputs;
+
+    printf("Enter the total number of values you want to input: ");
+    scanf("%d", &total_inputs);
+
+    printf("Enter %d numbers:\n", total_inputs);
+
+    for (count = 0; count < total_inputs; count++) {
+        scanf("%d", &num);
+
+        if (num > 0) {
+            positive_count++;
+        } else if (num < 0) {
+            negative_count++;
+        } else {
+            zero_count++;
+        }
+    }
+
+    printf("\nResults:\n");
+    printf("Positive numbers: %d\n", positive_count);
+    printf("Negative numbers: %d\n", negative_count);
+    printf("Zeroes: %d\n", zero_count);
+
+    return 0;
+}

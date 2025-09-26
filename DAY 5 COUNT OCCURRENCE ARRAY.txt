@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int size, i, target, count = 0;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+    int arr[size]; // Declare array of given size
+    printf("Enter %d elements for the array:\n", size);
+    for (i = 0; i < size; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+    printf("Enter the element to count its occurrences: ");
+    scanf("%d", &target);
+
+    for (i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            count++;
+        }
+    }
+    printf("The element %d appears %d times in the array.\n", target, count);
+
+    return 0;
+}
