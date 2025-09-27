@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h> // Required for strcat() and strlen()
+
+#define MAX_LENGTH 100 // Define a maximum length for the strings
+
+int main() {
+    char str1[MAX_LENGTH];
+    char str2[MAX_LENGTH];
+    char str3[MAX_LENGTH];
+    char result_str[MAX_LENGTH * 3]; 
+    printf("Enter the first string: ");
+    fgets(str1, MAX_LENGTH, stdin);
+    str1[strcspn(str1, "\n")] = 0; 
+    printf("Enter the second string: ");
+    fgets(str2, MAX_LENGTH, stdin);
+    str2[strcspn(str2, "\n")] = 0; 
+    printf("Enter the third string:");
+    fgets(str3, MAX_LENGTH, stdin);
+    str3[strcspn(str3, "\n")] = 0; 
+    strcpy(result_str, str1);
+    strcat(result_str, str2);
+    strcat(result_str, str3);
+    printf("The concatenated string is: %s\n", result_str);
+
+    return 0;
+}
