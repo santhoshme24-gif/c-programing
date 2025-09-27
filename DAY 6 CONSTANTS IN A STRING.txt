@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h> 
+
+#define MAX_WORDS 100
+#define MAX_WORD_LEN 50
+#define MAX_STRING_LEN 1000
+
+int main() {
+    char inputString[MAX_STRING_LEN];
+    char *words[MAX_WORDS];
+    int wordCount = 0;
+
+    printf("Enter a string: ");
+    fgets(inputString, sizeof(inputString), stdin);
+    inputString[strcspn(inputString, "\n")] = 0;
+    char *token = strtok(inputString, " \t,.;:!?");
+
+    while (token != NULL && wordCount < MAX_WORDS) {
+        words[wordCount] = strdup(token); 
+        wordCount++;
+        token = strtok(NULL, " \t,.;:!?");
+    }
+    printf("\nRepeating words and their counts:\n");
+    for (int i = 0; i < wordCount; i++) {
+        if (words[i] == NULL) continue;
+
+        int count = 1;
+        for (int j = i + 1; j < wordCount; j++) {
+            if (words[j] != NULL && strcmp(words[i], words[j]) == 0) {
+                count++;
+                free(words[j]); 
+                words[j] = NULL; 
+            }
+        }
+        if (count > 1) {
+            printf("'%s': %d times\n", words[i], count);
+        }
+        free(words[i]); 
+        words[i] = NULL;
+    }
+
+    return 0;
+}
